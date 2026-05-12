@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Swaraj Dhaskat | Full Stack & AI Developer</title>
+
+<meta
+  name="description"
+  content="Portfolio of Swaraj Dhaskat — Full Stack & AI Developer specializing in AI/ML, blockchain applications, intelligent software systems, and scalable business solutions."
+/>
+
+<!-- OpenGraph Meta Tags -->
+<meta property="og:title" content="Swaraj Dhaskat | Portfolio" /><meta
+  property="og:description"
+  content="Explore projects, skills, and interactive web experiences built by Swaraj using modern full stack technologies and ai-powered approaches."
+/>
+<meta property="og:image" content="preview.png" />
+<meta property="og:url" content="https://your-portfolio.vercel.app/" />
+<meta property="og:type" content="website" />
+
+<!-- Structured Metadata (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Swaraj Dhaskat",
+  "jobTitle": "Full Stack & AI Developer",
+  "url": "https://cube-portfolio-ecru.vercel.app/",
+  "sameAs": [
+    "https://github.com/SwarajD2308",
+    "https://www.linkedin.com/in/Swaraj-dahane-668a5a22a/"
+  ]
+}
+</script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // Replace "YOUR_PUBLIC_KEY" with your actual EmailJS Public Key
+        emailjs.init({
+          publicKey: "VpLGOSsSIQN26ucqH",
+        });
+      })();
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+
+  <body>
+    <div id="cur"></div>
+    <div id="cur-dot"></div>
+    <div id="progress"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- NAV -->
+    <nav>
+      <a href="#hero" class="logo">
+        <div class="logo-cube"></div>
+        Portfolio
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ════════ HERO ════════ -->
+    <section id="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-content">
+        <div class="badge">
+          <div class="badge-dot"></div>
+          Ready to work
+        </div>
+        <h1 class="hero-name">
+         <span>I Build Intelligent</span>
+        <span class="line2">Digital Products</span>
+        </h1>
+        <p class="hero-role">
+        Swaraj Dhaskat — Full Stack & AI Developer
+      </p>
+
+        <p class="hero-typed"><span id="typed"></span></p>
+       <p class="hero-desc">
+      MCA graduate specialized in Artificial Intelligence & Machine Learning
+      with experience building scalable business software, blockchain
+      applications, and AI-powered digital solutions.
+    </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-p btn-m">Explore My Work &rarr;</a>
+          <a href="#contact" class="btn-s btn-m">Let’s Collaborate</a>
+        </div>
+      </div>
+
+      <!-- 3D Rubik's Cube -->
+      <div class="cube-wrapper" id="cubeWrapper">
+        <div class="cube-aura"></div>
+        <div class="cube-viewport">
+          <div id="cubeScene"></div>
+        </div>
+        <div class="cube-ui">
+          <div class="cube-status" id="cubeStatus">Initializing...</div>
+          <div class="cube-btns">
+            <button class="cbtn btn-m" id="btnScramble">Scramble</button>
+            <button class="cbtn cbtn-solve btn-m" id="btnSolve">Solve</button>
+          </div>
+          <div class="cube-hint">
+            Drag to rotate &bull; buttons to scramble/solve
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="pips" style="background: var(--bg2)">
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+
+    <!-- ════════ ABOUT ════════ -->
+    <section id="about">
+      <div class="sec-head up">
+        <h2 class="sec-title">The <span>Developer</span> Behind The Code</h2>
+      </div>
+
+      <div class="about-container">
+        <div class="about-photo mobile-only up">
+          <img src="preview.png" alt="Swaraj Dhaskat" loading="lazy" />
+        </div>
+
+        <div class="about-stats-wrapper mobile-only up">
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-n" data-target="10">0</div>
+             <div class="stat-l">AI & Web Tech</div>
+            </div>
+            <div class="stat">
+              <div class="stat-n" data-target="15">0</div>
+              <div class="stat-l">Live Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat-n" data-target="1.5" data-decimals="1">0</div>
+              <div class="stat-l">Client Systems</div>
+            </div>
+            <div class="stat">
+              <div class="stat-n" data-target="100">0</div>
+              <div class="stat-l">Business Solutions</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-bio up">
+          <div class="about-text">
+  <p>
+  I am Swaraj Dhaskat, an MCA graduate from Ramdeobaba University
+  specialized in Artificial Intelligence & Machine Learning with a
+  CGPA of 9.25.
+</p>
+
+<p>
+  I develop real-world software systems focused on AI-powered
+  applications, blockchain solutions, and business automation software.
+</p>
+
+<p>
+  My experience includes building billing software for salons,
+  advocate firms, blockchain wallet systems, and intelligent
+  healthcare-related applications.
+</p>
+
+<p>
+  Currently, I am working on Havmor — an upcoming modern platform
+  focused on scalable technology and advanced digital experiences.
+</p>
+
+<p class="about-accent">
+  “I build intelligent systems that solve real-world problems
+  through scalable software and modern technology.”
+</p>
+  <!-- 🔥 RESUME BUTTONS (BEST PLACEMENT) -->
+        <div class="about-cta">
+          <a href="resume.pdf" target="_blank" class="btn-p btn-m">
+            View Resume
+          </a>
+          <a href="resume.pdf" download class="btn-s btn-m">
+            Download CV ↓
+          </a>
+</div>
+          </div>
+        </div>
+
+        <!-- Right Side: Photo + Stats (Desktop) -->
+        <div class="about-right-col desktop-only-flex up">
+          <div class="about-photo">
+            <img src="preview.png" alt="Brahmpreet Singh" loading="lazy" />
+          </div>
+          <div class="about-stats-wrapper">
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-n" data-target="10">0</div>
+                <div class="stat-l">AI & Web Tech</div>
+              </div>
+              <div class="stat">
+                <div class="stat-n" data-target="15">0</div>
+                <div class="stat-l">Live Projects</div>
+              </div>
+              <div class="stat">
+                <div class="stat-n" data-target="1.5" data-decimals="1">0</div>
+                <div class="stat-l">Client Systems</div>
+              </div>
+              <div class="stat">
+                <div class="stat-n" data-target="100">0</div>
+                <div class="stat-l">Business Solutions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pips" style="background: var(--bg)">
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+
+    <!-- ════════ SKILLS ════════ -->
+    <section id="skills">
+      <div class="sec-head">
+        <div class="sec-tag">02 &mdash; Skills</div>
+        <h2 class="sec-title">My <span>Tech Stack</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- FULL STACK -->
+        <div class="skill-card sk-html up">
+          <div class="sk-scene">
+            <div class="sk-cube" style="animation-delay: -5.25s">
+              <div class="sf f" style="background: var(--red)">&#127760;</div>
+              <div class="sf b" style="background: var(--red)"></div>
+              <div class="sf l" style="background: var(--red)"></div>
+              <div class="sf r" style="background: var(--red)"></div>
+              <div class="sf t" style="background: var(--red)"></div>
+              <div class="sf d" style="background: var(--red)"></div>
+            </div>
+          </div>
+         <div class="sk-name">Full Stack Development</div>
+          <div class="sk-desc">
+          Html, Css, Js, Bootstrap,Flask,MysqlDb
+           REST APIs, Tailwind CSS
+          </div>
+          <div class="bar-wrap">
+            <div class="bar" data-w="95"></div>
+          </div>
+        </div>
+
+        <!-- BACKEND -->
+        <div class="skill-card sk-css up">
+          <div class="sk-scene">
+            <div class="sk-cube" style="animation-delay: -3.5s">
+              <div class="sf f" style="background: #0051a2">&#129302;</div>
+              <div class="sf b" style="background: #003d7a"></div>
+              <div class="sf l" style="background: #004489"></div>
+              <div class="sf r" style="background: #003d7a"></div>
+              <div class="sf t" style="background: #0066cc"></div>
+              <div class="sf d" style="background: #002d5c"></div>
+            </div>
+          </div>
+          <div class="sk-name">Backend & APIs</div>
+          <div class="sk-desc">
+            Node.js, Express.js,Flask, REST APIs, MongoDB, MySQL
+          </div>
+          <div class="bar-wrap">
+            <div class="bar" data-w="85"></div>
+          </div>
+        </div>
+
+        <!-- DATA -->
+        <div class="skill-card sk-js up">
+          <div class="sk-scene">
+            <div class="sk-cube" style="animation-delay: -1.75s">
+              <div class="sf f" style="background: #ffd500">&#9729;</div>
+              <div class="sf b" style="background: #ccaa00"></div>
+              <div class="sf l" style="background: #dbb800"></div>
+              <div class="sf r" style="background: #ccaa00"></div>
+              <div class="sf t" style="background: #ffdf33"></div>
+              <div class="sf d" style="background: #997e00"></div>
+            </div>
+          </div>
+          <div class="sk-name">AI & Machine Learning</div>
+          <div class="sk-desc">
+          Python, Machine Learning, OpenCV,
+          AI Integrations, Data Analysis
+          </div>
+          <div class="bar-wrap">
+            <div class="bar" data-w="80"></div>
+          </div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="skill-card sk-py up">
+          <div class="sk-scene">
+            <div class="sk-cube" style="animation-delay: 0s">
+              <div class="sf f" style="background: #009b48">&#128013;</div>
+              <div class="sf b" style="background: #007336"></div>
+              <div class="sf l" style="background: #00853e"></div>
+              <div class="sf r" style="background: #007336"></div>
+              <div class="sf t" style="background: #00b854"></div>
+              <div class="sf d" style="background: #005c2b"></div>
+            </div>
+          </div>
+          <div class="sk-name">Blockchain & Tools</div>
+          <div class="sk-desc">
+          Solidity, Smart Contracts, GitHub,Postman, Firebase, VS Code
+          </div>
+          <div class="bar-wrap">
+            <div class="bar" data-w="90"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pips" style="background: var(--bg2)">
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+    <!-- ════════ TIMELINE ════════ -->
+    <section id="timeline">
+      <div class="sec-head">
+        <div class="sec-tag">03 — Journey</div>
+        <h2 class="sec-title">My <span>Journey</span></h2>
+        <p class="sec-sub">
+          From learning basics to building real-world applications.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- LINE -->
+        <div class="timeline-line"></div>
+
+        <!-- ITEM -->
+        <div class="timeline-item left up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2025–Present</span>
+            <h3>Full Stack & AI Developer</h3>
+
+            <p class="timeline-org">
+              Freelance & Independent Projects
+            </p>
+
+            <p>
+              Developed business software systems,
+              advocate websites, blockchain applications,
+              and AI-powered solutions for real-world clients.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item right up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2024–2026</span>
+          <h3>MCA — AI/ML Specialization</h3>
+
+          <p class="timeline-org">
+            Ramdeobaba University
+          </p>
+
+          <p>
+            Specialized in Artificial Intelligence & Machine Learning
+            with a CGPA of 9.25 while building real-world software systems.
+          </p>
+          </div>
+        </div>
+
+        <div class="timeline-item left up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2023–2024</span>
+            <h3>Exploring Data & AI</h3>
+            <p class="timeline-org">Projects</p>
+            <p>
+              Built AI-based tools like face recognition systems and dashboards,
+              strengthening interest in ai-powered development.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item right up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2021–2024</span>
+            <h3>Bachelor of Computer Science</h3>
+
+            <p class="timeline-org">
+              Computer Science Degree
+            </p>
+
+            <p>
+              Built strong foundations in programming,
+              software engineering, and database systems.
+            </p>
+          </div>
+        </div>
+
+         
+      </div>
+    </section>
+
+    <div class="pips" style="background: var(--bg2)">
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+    <!-- ════════ PROJECTS ════════ -->
+    <section id="projects">
+      <div class="sec-head">
+        <div class="sec-tag">04 — Projects</div>
+        <h2 class="sec-title">Featured <span>Work</span></h2>
+        <p class="sec-sub">Real-world projects & case studies</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- PROJECT 1 -->
+        <div class="proj p1 up">
+          <div class="proj-inner">
+            <div
+              class="proj-f"
+              style="
+                background-image: url(&quot;https://i.pinimg.com/736x/03/8c/04/038c04ef5efb0b325931013df6447363.jpg&quot;);
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div class="overlay"></div>
+              <div class="proj-num">01</div>
+              <div class="proj-title">Mayra Salon Billing Software</div>
+              <div class="proj-tags">
+                <span
+                  class="ptag"
+                  style="color: var(--blue); border-color: var(--blue)"
+                  >Flask</span
+                >
+                <span
+                  class="ptag"
+                  style="color: var(--green); border-color: var(--green)"
+                  >Healthcare</span
+                >
+              </div>
+            </div>
+            <div class="proj-bk">
+              <div class="proj-desc">
+                Developed and deployed custom billing software
+                for salon and academy business operations.
+              </div>
+              <a
+                href="https://admin.mayrasalonandacademy.com/"
+                target="_blank"
+                class="proj-link"
+              >
+                View Live →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="proj p2 up">
+          <div class="proj-inner">
+            <div
+              class="proj-f"
+              style="
+                background-image: url(&quot; https://i.pinimg.com/736x/53/48/47/5348472dc4736f4b143010e19272e4f7.jpg&quot;);
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div class="overlay"></div>
+              <div class="proj-num">02</div>
+              <div class="proj-title">Advocate Thakre & Associates</div>
+              <div class="proj-tags">
+                <span
+                  class="ptag"
+                  style="color: var(--pink); border-color: var(--pink)"
+                  >Flask</span
+                >
+                <span
+                  class="ptag"
+                  style="color: var(--orange); border-color: var(--orange)"
+                  >Business</span
+                >
+              </div>
+            </div>
+            <div class="proj-bk">
+              <div class="proj-desc">
+                Professional advocate firm website with responsive UI,branding, and client-focused experience.
+              </div>
+              <a
+                href="https://mayrasalonacademysite.vercel.app/"
+                target="_blank"
+                class="proj-link"
+              >
+                View Live →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="proj p3 up">
+          <div class="proj-inner">
+            <div
+              class="proj-f"
+              style="
+                background-image: url(&quot;  https://i.pinimg.com/736x/91/94/0a/91940a743f774821bc823ffba505778b.jpg&quot;);
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div class="overlay"></div>
+              <div class="proj-num">03</div>
+              <div class="proj-title">Blockchain Wallet System</div>
+              <div class="proj-tags">
+                <span
+                  class="ptag"
+                  style="color: var(--blue); border-color: var(--blue)"
+                  >Marketing</span
+                >
+                <span
+                  class="ptag"
+                  style="color: var(--yellow); border-color: var(--yellow)"
+                  >Full stack</span
+                >
+              </div>
+            </div>
+            <div class="proj-bk">
+              <div class="proj-desc">
+                Blockchain wallet application exploring Solidity,
+                smart contracts, and decentralized systems.
+              </div>
+              <a
+                href="https://swaraj03-alt.github.io/Blockchain_Project_/"
+                target="_blank"
+                class="proj-link"
+              >
+                View Live →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="proj p4 up">
+          <div class="proj-inner">
+            <div
+              class="proj-f"
+              style="
+                background-image: url(&quot;https://i.pinimg.com/736x/97/1e/d9/971ed93b08d16b28b3a2ca575693590f.jpg&quot;);
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div class="overlay"></div>
+              <div class="proj-num">04</div>
+              <div class="proj-title">AI Powered Medication System</div>
+              <div class="proj-tags">
+                <span
+                  class="ptag"
+                  style="color: var(--red); border-color: var(--red)"
+                  >Flask</span
+                >
+                <span
+                  class="ptag"
+                  style="color: var(--yellow); border-color: var(--yellow)"
+                  >UI</span
+                >
+              </div>
+            </div>
+            <div class="proj-bk">
+              <div class="proj-desc">
+                AI-driven healthcare application focused on
+intelligent medication recommendations.
+              </div>
+              <a
+                href="https://raj-dance-fitness.vercel.app/"
+                target="_blank"
+                class="proj-link"
+              >
+                View Live →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div class="proj p5 up">
+          <div class="proj-inner">
+            <div
+              class="proj-f"
+              style="
+                background-image: url(&quot; https://i.pinimg.com/474x/29/9a/8c/299a8c17652d4eebc29a415cbdf57fae.jpg&quot;);
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div class="overlay"></div>
+              <div class="proj-num">05</div>
+              <div class="proj-title">Havmor (Upcoming)</div>
+              <div class="proj-tags">
+                <span
+                  class="ptag"
+                  style="color: var(--orange); border-color: var(--orange)"
+                  >FullStack</span
+                >
+                <span
+                  class="ptag"
+                  style="color: var(--green); border-color: var(--green)"
+                  >Business</span
+                >
+              </div>
+            </div>
+            <div class="proj-bk">
+              <div class="proj-desc">
+                Building a scalable platform focused on
+modern digital experiences and intelligent systems.
+              </div>
+              <a
+                href="https://singhenterprisez.com/"
+                target="_blank"
+                class="proj-link"
+              >
+                View Live →
+              </a>
+            </div>
+          </div>
+        </div>
+
+ 
+      </div>
+    </section>
+    <div class="pips" style="background: var(--bg)">
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+    <!-- ════════ TESTIMONALS ════════ -->
+    <section id="testimonials">
+      <div class="sec-head">
+        <div class="sec-tag">05 — Testimonials</div>
+        <h2 class="sec-title">Kind <span>Words</span></h2>
+        <p class="sec-sub">Feedback from clients and people I’ve worked with</p>
+      </div>
+
+      <div class="testi-wrapper">
+        <!-- fade edges -->
+        <div class="fade left"></div>
+        <div class="fade right"></div>
+
+        <div class="testi-track">
+          <!-- CARD -->
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">PB</div>
+              <div>
+                <h4>Dr. Pankaj Bagde</h4>
+                <p>Physician, City Multispeciality Hospital</p>
+              </div>
+            </div>
+            <p class="testi-text">
+              ""Swaraj developed our hospital website with a clear focus on
+              usability and patient experience. The design is modern,
+              responsive, and aligns perfectly with our requirements."
+            </p>
+          </div>
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">DU</div>
+              <div>
+                <h4>Dipali Usrete</h4>
+                <p>Owner, Mayra Makeup Studio & Academy</p>
+              </div>
+            </div>
+            <p class="testi-text">
+              "Swaraj delivered a clean, professional website with excellent UI
+              and responsiveness."
+            </p>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">VY</div>
+              <div>
+                <h4>Litsbros Pvt Ltd</h4>
+                <p>Founder of Litsbros pvt ltd.</p>
+              </div>
+            </div>
+            <p class="testi-text">
+              "Strong focus on branding and performance. Excellent execution of
+              our vision."
+            </p>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">HD</div>
+              <div>
+                <h4>Himanshu Dongare</h4>
+                <p>Founder, Digikey Centro</p>
+              </div>
+            </div>
+            <p class="testi-text">
+              "Strong focus on branding and performance. Excellent execution of
+              our vision."
+            </p>
+          </div>
+
+           
+
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">DF</div>
+              <div>
+                <h4>Department Faculty</h4>
+                <p>Computer Engineering</p>
+              </div>
+            </div>
+            <p class="testi-text">
+              "Strong problem-solving ability and excellent full stack development
+              skills."
+            </p>
+          </div>
+
+          <!-- duplicate for infinite scroll -->
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">PB</div>
+              <div>
+                <h4>Dr. Pankaj Bagde</h4>
+                <p>Physician, City Multispeciality Hospital</p>
+              </div>
+            </div>
+            <p class="testi-text">
+              "Swaraj developed our hospital website with a clear focus on
+              usability and patient experience. The design is modern,
+              responsive, and aligns perfectly with our requirements."
+            </p>
+          </div>
+          <div class="testi-card">
+            <div class="testi-top">
+              <div class="avatar">DU</div>
+              <div>
+                <h4>Dipali Usrete</h4>
+                <p>Owner, Mayra Makeup Studio & Academy</p>
+              </div>
+            </div>
+            <p class="testi-text">
+              "Swaraj delivered a clean, professional website with excellent UI
+              and responsiveness."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="pips" style="background: var(--bg2)">
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+    <!-- ════════ SERVICES ════════ -->
+    <section id="services">
+      <div class="sec-head">
+        <div class="sec-tag">06 — Services</div>
+        <h2 class="sec-title">What I <span>Offer</span></h2>
+        <p class="sec-sub">
+          Interactive solutions crafted for real-world impact
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- CARD 1 -->
+        <div class="service-cube up c1">
+          <div class="service-inner">
+            <div class="service-front">
+              <i data-lucide="code"></i>
+              <h3>AI Solutions</h3>
+            </div>
+            <div class="service-back">
+              <p>Modern UI with React, Next.js & smooth 3D animations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="service-cube up c2">
+          <div class="service-inner">
+            <div class="service-front">
+              <i data-lucide="server"></i>
+              <h3>Full Stack Dev</h3>
+            </div>
+            <div class="service-back">
+              <p>Scalable apps with APIs, backend & database.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="service-cube up c3">
+          <div class="service-inner">
+            <div class="service-front">
+              <i data-lucide="rocket"></i>
+              <h3>Blockchain Development</h3>
+            </div>
+            <div class="service-back">
+              <p>High-converting fast landing pages.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="service-cube up c4">
+          <div class="service-inner">
+            <div class="service-front">
+              <i data-lucide="palette"></i>
+              <h3>Business Software Systems</h3>
+            </div>
+            <div class="service-back">
+              <p>Clean and intuitive design experience.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="service-cube up c5">
+          <div class="service-inner">
+            <div class="service-front">
+              <i data-lucide="bar-chart-3"></i>
+              <h3>Deployment & Optimization</h3>
+            </div>
+            <div class="service-back">
+              <p>AI-powered insights & analytics solutions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="service-cube up c6">
+          <div class="service-inner">
+            <div class="service-front">
+              <i data-lucide="zap"></i>
+              <h3>Search Engine Optimization</h3>
+            </div>
+            <div class="service-back">
+              <p>Speed, SEO & performance optimization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pips" style="background: var(--bg2)">
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+    <!-- ════════ BLOG  ════════ -->
+    <section id="blog">
+      <div class="sec-head">
+        <div class="sec-tag">07 — Blog</div>
+        <h2 class="sec-title">Insights</h2>
+      </div>
+
+      <div class="blog-grid" id="blogGrid"></div>
+
+      <div class="blog-btn-wrap">
+        <button id="blogToggleBtn" class="blog-btn">View More Articles</button>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="blogModal" class="blog-modal">
+      <div class="blog-modal-bg"></div>
+
+      <div class="blog-modal-content">
+        <button class="close-btn">✕</button>
+
+        <div class="modal-header"></div>
+
+        <div class="modal-body">
+          <div class="modal-meta">
+            <span id="modalCategory"></span>
+            <span id="modalReadTime"></span>
+          </div>
+
+          <h2 id="modalTitle"></h2>
+          <div id="modalContent"></div>
+        </div>
+      </div>
+    </div>
+       <div class="pips" style="background: var(--bg)">
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+   
+    <!-- ════════ CONTACT ════════ -->
+    <section id="contact">
+      <div class="sec-head">
+        <div class="sec-tag">04 &mdash; Contact</div>
+        <h2 class="sec-title">Let's <span>Connect</span></h2>
+        <p class="sec-sub">Have a project? Let's solve it together.</p>
+      </div>
+      <form id="contact-form" class="contact-box up">
+        <div class="f-row">
+          <div class="f-grp">
+            <label>Your Name</label
+            ><input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          <div class="f-grp">
+            <label>Email Address</label
+            ><input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+        </div>
+        <div class="f-grp">
+          <label>Subject</label
+          ><input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="What's this about?"
+            required
+          />
+        </div>
+        <div class="f-grp">
+          <label>Message</label
+          ><textarea
+            id="message"
+            name="message"
+            placeholder="Tell me about your project..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit" id="submit-btn" class="f-btn btn-m">
+          Send Message &#9992;
+        </button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="social-links">
+        <a
+          href="https://github.com/swaraj03-alt"
+          class="social-icon"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/swaraj-dhaskat-028b1822a/"
+          class="social-icon"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a
+          href="mailto:swarajdhaskat02@gmail.com"
+          class="social-icon"
+          aria-label="Email"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            ></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+      <p>
+        <a href="support.html" class="footer-link"><strong>Support</strong></a>
+        the developer.
+      </p>
+      <p style="margin-top: 8px; font-size: 0.8rem">
+        &copy; 2026 All Rights Reserved |
+        <strong><a href="#hero" class="footer-link">Swaraj Dhaskat</a></strong>
+      </p>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script> 
+    <script src="script.js"></script>
+  </body>
+</html>
